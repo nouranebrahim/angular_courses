@@ -1,0 +1,9 @@
+<p *ngIf="clickedCourse">{{clickedCourse}}</p>
+<ul>
+<!-- <app-courseitems *ngFor="let course of courses" [title]="course.title" [instucrtor]="course.instructor" 
+[isAvailable]="course.isAvailabel"
+(courseClick)="onCourseClick($event)"></app-courseitems> -->
+<app-courseitems *ngFor="let course of courses" [courseData]="course"
+(courseClick)="onCourseClick($event)" (click)="onCourseItemClick(course)"></app-courseitems>
+
+</ul>
